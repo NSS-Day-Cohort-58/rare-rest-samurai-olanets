@@ -8,6 +8,7 @@ from planetapi.models import Category
 
 
 class CategoryView(ViewSet):
+
     def retrieve(self, request, pk):
         """Handle GET requests for single category
 
@@ -15,6 +16,29 @@ class CategoryView(ViewSet):
             Response -- JSON serialized category
         """
         category = Category.objects.get(pk=pk)
+        serializer = CategorySerializer(category)
+        return Response(serializer.data)
+
+
+    def list(self, request):
+            """Handle GET requests to get all categories
+            Returns:
+                Response -- JSON serialized list of categories
+            """
+            category = Category.objects.all()
+            serializer = CategorySerializer(category, many=True)
+            return Response(serializer.data)
+
+
+    def create(self, request):
+        """Handle POST operations
+
+        Returns:
+        Response -- JSON serialized category instance"""
+        
+        category = Category.objects.create(
+            label = request.data['label']
+        )
         serializer = CategorySerializer(category)
         return Response(serializer.data)
 
