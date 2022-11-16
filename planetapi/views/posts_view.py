@@ -16,7 +16,7 @@ class PostView(ViewSet):
             content = request.data["content"],
             date= request.data["date"],
             image = request.data["image"],
-            category = category
+            # category = category
         )
         serializer = PostSerializer(post)
         return Response(serializer.data)
@@ -53,4 +53,4 @@ class PostSerializer(serializers.ModelSerializer):
     """JSON serializer for posts."""
     class Meta:
         model=Post
-        fields=("id", "title", "content", "category", "publication_date", "image")
+        fields=("id", "title", "content", "category", "date", "image")
