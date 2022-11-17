@@ -1,1 +1,1 @@
-from views.user_view import UserView
+from .author_view import AuthorView
