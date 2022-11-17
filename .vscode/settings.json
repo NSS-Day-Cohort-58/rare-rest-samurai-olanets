@@ -1,7 +1,7 @@
 {
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
-        "--django-settings-module=rare.settings",
+        "--django-settings-module=rare-rest-samurai-planets.settings",
     ],
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
