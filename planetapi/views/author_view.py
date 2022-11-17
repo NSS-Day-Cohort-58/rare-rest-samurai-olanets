@@ -2,28 +2,27 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from planetapi.models import User
+from planetapi.models import Author
 
-class UserView(ViewSet):
+class AuthorView(ViewSet):
     def retrieve (self, request, pk):
-        user = User.objects.get(pk=pk)
-        serializer = UserSerializer(user)
+        author = Author.objects.get(pk=pk)
+        serializer = AuthorSerializer(author)
         return Response(serializer.data)
 
     def list(self, request):
-        users = User.objects.all()
-        serializer = UserSerialzer(users, many=True)
+        authors = Author.objects.all()
+        serializer = AuthorSerializer(authors, many=True)
         return Response(serializer.data)
 
-class UserSerializer(serializers.ModelSerializer):
+class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = Author
         fields = (
             'id',
             'user',
             'bio',
-            'profile_image_url',
-            'created_on',
+            'img',
             'active'
         )
     depth = 1
