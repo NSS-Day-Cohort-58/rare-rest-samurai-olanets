@@ -1,0 +1,20 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "123",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Andy123",
+            "first_name": "Andy",
+            "last_name": "De Leon",
+            "email": "ad@123.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

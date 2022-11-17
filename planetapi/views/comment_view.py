@@ -14,8 +14,8 @@ class CommentView(ViewSet):
         """
 
         comments = Comment.objects.all()
-        serialized = (comments, many=True)
-        return Response(serialized.data, status=status.HTTP_200_OK)
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
