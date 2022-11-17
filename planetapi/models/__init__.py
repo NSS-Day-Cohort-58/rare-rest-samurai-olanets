@@ -1,1 +1,2 @@
-from models.user import User
+from .category import Category
+from .user import User

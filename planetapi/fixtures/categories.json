@@ -1,0 +1,44 @@
+[
+    {
+        "model": "planetapi.category",
+        "pk": 1,
+        "fields": {
+            "label": "News"
+        }
+    },
+    {
+        "model": "planetapi.category",
+        "pk": 2,
+        "fields": {
+            "label": "Pop Culture"
+        }
+    },
+    {
+        "model": "planetapi.category",
+        "pk": 3,
+        "fields": {
+            "label": "Horror"
+        }
+    },
+    {
+        "model": "planetapi.category",
+        "pk": 4,
+        "fields": {
+            "label": "Anime"
+        }
+    },
+    {
+        "model": "planetapi.category",
+        "pk": 5,
+        "fields": {
+            "label": "Fantasy"
+        }
+    },
+    {
+        "model": "planetapi.category",
+        "pk": 6,
+        "fields": {
+            "label": "Drama"
+        }
+    }
+]
