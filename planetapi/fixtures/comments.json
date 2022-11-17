@@ -4,8 +4,35 @@
         "pk": 1,
         "fields": {
             "author": 1,
-            "post": 1,
+            "post": 2,
             "content": "This was a great read"
+        }
+    },
+    {
+        "model": "planetapi.comment",
+        "pk": 2,
+        "fields": {
+            "author": 1,
+            "post": 4,
+            "content": "This was interesting"
+        }
+    },
+    {
+        "model": "planetapi.comment",
+        "pk": 3,
+        "fields": {
+            "author": 1,
+            "post": 1,
+            "content": "I could have gone without reading this"
+        }
+    },
+    {
+        "model": "planetapi.comment",
+        "pk": 4,
+        "fields": {
+            "author": 1,
+            "post": 3,
+            "content": "Not the best I've read"
         }
     }
 ]
