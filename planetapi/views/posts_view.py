@@ -3,7 +3,7 @@ from django.http import HttpResponseServerError
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework.decorators import action
-from planetapi.models import Post
+from planetapi.models import Post, Category
 
 class PostView(ViewSet):
     def create(self, request):
@@ -16,7 +16,7 @@ class PostView(ViewSet):
             content = request.data["content"],
             date= request.data["date"],
             image = request.data["image"],
-            # category = category
+            category = category
         )
         serializer = PostSerializer(post)
         return Response(serializer.data)
