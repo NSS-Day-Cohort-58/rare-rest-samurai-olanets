@@ -53,4 +53,4 @@ class PostSerializer(serializers.ModelSerializer):
     """JSON serializer for posts."""
     class Meta:
         model=Post
-        fields=("id", "title", "content", "category", "date", "image")
+        fields=("id", "title", "content", "category", "date", "image",)
