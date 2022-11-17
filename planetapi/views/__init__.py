@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 from .posts_view import PostView
-=======
-from .user_view import UserView
 from .category_view import CategoryView
->>>>>>> main
+from .category_view import CategoryView
+from .author_view import AuthorView
+
