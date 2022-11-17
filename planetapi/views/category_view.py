@@ -42,6 +42,23 @@ class CategoryView(ViewSet):
         serializer = CategorySerializer(category)
         return Response(serializer.data)
 
+    def update(self, request, pk):
+        """Handle PUT requests for a category
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+
+        category = Category.objects.get(pk=pk)
+        category.label = request.data["label"]
+        category.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    def destroy(self, request, pk):
+        category = Category.objects.get(pk=pk)
+        category.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class CategorySerializer(serializers.ModelSerializer):
     """JSON serializer for categories
