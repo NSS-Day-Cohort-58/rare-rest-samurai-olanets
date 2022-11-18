@@ -5,5 +5,5 @@ class Post(models.Model):
     content = models.CharField(max_length=512)
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     date = models.DateField()
-    image = models.CharField(max_length=512)
+    image = models.CharField(max_length=513)
     
