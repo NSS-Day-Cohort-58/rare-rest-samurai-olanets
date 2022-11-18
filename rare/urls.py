@@ -19,6 +19,7 @@ from django.conf.urls import include
 from planetapi.views import CategoryView, PostView
 from planetapi.views import AuthorView
 from rest_framework import routers
+from planetapi.views import register_user, login_user
 
 
 
@@ -30,6 +31,8 @@ router.register(r'posts', PostView, 'post')
 
 
 urlpatterns = [
+    path('register', register_user),
+    path('login', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
 
