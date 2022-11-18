@@ -6,4 +6,5 @@ class Post(models.Model):
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     date = models.DateField()
     image = models.CharField(max_length=512)
+    author = models.ForeignKey("Author", on_delete=models.CASCADE)
     
