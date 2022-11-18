@@ -9,6 +9,8 @@ __pycache__/
 # Coach suggestions
 migrations/
 
+migrations/0001_initial.py
+
 # Distribution / packaging
 .Python
 build/
