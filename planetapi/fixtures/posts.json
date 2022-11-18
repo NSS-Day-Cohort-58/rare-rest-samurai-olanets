@@ -6,7 +6,8 @@
             "title": "Three Body Problem",
             "content": "The Three-Body Problem is a science fiction novel written by the Chinese writer Liu Cixin. The title refers to the three-body problem in orbital mechanics. It is the first novel of the Remembrance of Earth's Past trilogy, but the whole series is often referred to as The Three-Body Problem",
             "date": "2008-01-01",
-            "image": "http://"
+            "image": "http://",
+            "category": 2
         }
     },
     {
@@ -16,7 +17,8 @@
             "title": "The Dark Forest",
             "content": "The Dark Forest is a 2008 science fiction novel by the Chinese writer Liu Cixin. It is the sequel to the Hugo Award-winning novel The Three-Body Problem in the trilogy titled Remembrance of Earth's Past, but Chinese readers generally refer to the series by the title of the first novel.[1] The English version, translated by Joel Martinsen, was published in 2015.",
             "date": "2009-01-01",
-            "image": "http://"
+            "image": "http://",
+            "category": 3
         }
     },
     {
@@ -26,7 +28,8 @@
             "title": "Death's End",
             "content": "Death's End (Chinese: 死神永生) is a science fiction novel by the Chinese writer Liu Cixin. It is the third novel in the trilogy titled Remembrance of Earth's Past, following the Hugo Award-winning novel The Three-Body Problem and its sequel, The Dark Forest. The original Chinese version was published in 2010. Ken Liu translated the English edition in 2016.[2] It was a finalist for the 2017 Hugo Award for Best Novel and winner of the 2017 Locus Award for Best Science Fiction Novel. ",
             "date": "2010-01-01",
-            "image": "http://"
+            "image": "http://",
+            "category": 4
         }
     },
     {
@@ -36,7 +39,8 @@
             "title": "Nintendo Power",
             "content": "All 285 issues of Nintendo Power magazine available for free download at Archive.org",
             "date": "2022-01-01",
-            "image": "http://"
+            "image": "http://",
+            "category": 1
         }
     }
 ]
