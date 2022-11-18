@@ -48,10 +48,11 @@ class CommentView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-
+        author = Author.objects.get(pk=request.data["author"])
+        post = Post.objects.get(pk=request.data["post"])
         comment = Comment.objects.get(pk=pk)
-        comment.author = request.data["author"]
-        comment.post = request.data["post"]
+        comment.author = author
+        comment.post = post
         comment.content = request.data["content"]
         comment.save()
 
