@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from planetapi.views import CategoryView, PostView
-from planetapi.views import AuthorView
+from planetapi.views import CategoryView
+from planetapi.views import AuthorView, CommentView, PostView
 from rest_framework import routers
 from planetapi.views import register_user, login_user
 
@@ -26,8 +26,8 @@ from planetapi.views import register_user, login_user
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'categories', CategoryView, 'category')
 router.register(r'authors', AuthorView, 'author')
+router.register(r'comments', CommentView, 'comment')
 router.register(r'posts', PostView, 'post')
-
 
 
 urlpatterns = [
