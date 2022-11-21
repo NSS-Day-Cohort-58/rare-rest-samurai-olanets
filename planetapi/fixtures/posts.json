@@ -6,9 +6,9 @@
             "title": "Three Body Problem",
             "content": "The Three-Body Problem is a science fiction novel written by the Chinese writer Liu Cixin. The title refers to the three-body problem in orbital mechanics. It is the first novel of the Remembrance of Earth's Past trilogy, but the whole series is often referred to as The Three-Body Problem",
             "date": "2008-01-01",
-            "image": "http://",
+            "image": "http://m.media-amazon.com/images/I/518NfKo+MWS._SL500_.jpg",
             "category": 2,
-            "author": 3
+            "author": 2
         }
     },
     {
@@ -44,7 +44,7 @@
             "date": "2022-01-01",
             "image": "http://",
             "category": 1,
-            "author": 3
+            "author": 2
         }
     }
 ]
