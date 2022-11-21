@@ -1,0 +1,51 @@
+[
+    {
+        "model": "planetapi.tag",
+        "pk": 1,
+        "fields": {
+            "label": "comedy"
+        }
+    },
+    {
+        "model":"planetapi.tag",
+        "pk": 2,
+        "fields": {
+            "label": "drama"
+        }
+    },
+    {
+        "model": "planetapi.tag",
+        "pk": 3,
+        "fields": {
+            "label": "literature"
+        }
+    },
+    {
+        "model": "planetapi.tag",
+        "pk": 4,
+        "fields": {
+            "label": "science fiction"
+        }
+    },
+    {
+        "model":"planetapi.tag",
+        "pk": 5,
+        "fields": {
+            "label": "food"
+        }
+    },
+    {
+        "model":"planetapi.tag",
+        "pk": 6,
+        "fields": {
+            "label": "tech"
+        }
+    },
+    {
+        "model":"planetapi.tag",
+        "pk": 7,
+        "fields": {
+            "label": "music"
+        }
+    }
+]
