@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from planetapi.views import CategoryView
-from planetapi.views import AuthorView, CommentView, PostView
+from planetapi.views import AuthorView, CommentView, PostView, TagView
 from rest_framework import routers
 from planetapi.views import register_user, login_user
 
@@ -28,6 +28,7 @@ router.register(r'categories', CategoryView, 'category')
 router.register(r'authors', AuthorView, 'author')
 router.register(r'comments', CommentView, 'comment')
 router.register(r'posts', PostView, 'post')
+router.register(r'tags', TagView, 'tag')
 
 
 urlpatterns = [
@@ -35,5 +36,4 @@ urlpatterns = [
     path('login', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-
 ]
