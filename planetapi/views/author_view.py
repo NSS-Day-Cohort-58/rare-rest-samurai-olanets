@@ -25,4 +25,4 @@ class AuthorSerializer(serializers.ModelSerializer):
             'img',
             'active'
         )
-    depth = 1
+    
