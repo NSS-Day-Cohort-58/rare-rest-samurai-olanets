@@ -7,4 +7,3 @@ class Post(models.Model):
     date = models.DateField()
     image = models.CharField(max_length=512)
     author = models.ForeignKey("Author", on_delete=models.CASCADE)
-    

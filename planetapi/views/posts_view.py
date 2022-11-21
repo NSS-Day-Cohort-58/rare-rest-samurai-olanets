@@ -39,12 +39,14 @@ class PostView(ViewSet):
     def update(self, request, pk):
         """ Handle PUT request for a single post. """
         post = Post.objects.get(pk=pk)
-        post.title=request.data["description"]
-        post.content=request.data["content"]
-        post.date=request.data["date"]
-        post.image=request.data["image"]
-        post.category=request.data["category"]
-        post.author=request.data["author"]
+        category = Category.objects.get(pk=request.data["category"])
+        author = Author.objects.get(pk=request.data["author"])
+        post.title = request.data["title"]
+        post.content = request.data["content"]
+        post.date = request.data["date"]
+        post.image = request.data["image"]
+        post.category = category
+        post.author = author
         post.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
