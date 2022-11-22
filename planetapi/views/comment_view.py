@@ -32,7 +32,7 @@ class CommentView(ViewSet):
 
         Returns:
         Response -- JSON serialized category instance"""
-        author = Author.objects.get(pk=request.data["author"])
+        author = Author.objects.get(user=request.auth.user)
         post = Post.objects.get(pk=request.data["post"])
         comment = Comment.objects.create(
             author = author,
@@ -48,12 +48,14 @@ class CommentView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        author = Author.objects.get(pk=request.data["author"])
-        post = Post.objects.get(pk=request.data["post"])
+    
+       
         comment = Comment.objects.get(pk=pk)
-        comment.author = author
-        comment.post = post
         comment.content = request.data["content"]
+
+        post = Post.objects.get(pk=request.data["post"])
+        comment.post = post
+
         comment.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -66,4 +68,4 @@ class CommentView(ViewSet):
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ('id', 'author', 'post', 'content')
+        fields = ('id', 'author', 'post', 'content', 'author_name')
