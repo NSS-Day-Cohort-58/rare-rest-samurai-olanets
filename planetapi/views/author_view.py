@@ -23,6 +23,8 @@ class AuthorSerializer(serializers.ModelSerializer):
             'user',
             'bio',
             'img',
-            'active'
+            'active',
+            'full_name'
         )
+        depth = 1
     
